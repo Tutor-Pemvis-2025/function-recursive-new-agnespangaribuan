@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="test-recursive-01"/>
+        <attribute name="authors" value="MUG1II"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-11 09:00:02 PM"/>
+        <attribute name="created" value="TVVHMUlJO0xBUFRPUC1CQ00wRUxJUzsyMDI1LTExLTExOzA4OjIxOjI1IFBNOzI3NzE="/>
+        <attribute name="edited" value="TVVHMUlJO0xBUFRPUC1CQ00wRUxJUzsyMDI1LTExLTExOzA4OjI0OjA5IFBNOzE7YWNlcjtMQVBUT1AtTzMzNlE5Qk87MjAyMi0xMi0xMTswOTozMDozMSBQTTtmYWN0b3JpYWwuZnByZzs3MTM3"/>
+        <attribute name="edited" value="TVVHMUlJO0xBUFRPUC1CQ00wRUxJUzsyMDI1LTExLTExOzA5OjAwOjAyIFBNOzU7Mjg3Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, hasil" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <output expression="&quot;Bilangan yang dimasukkan : &quot; &amp; x" newline="True"/>
+            <call expression="angka(x)"/>
+            <output expression="&quot;Hasil perhitungan rekursif : &quot; &amp; angka(x)" newline="True"/>
+        </body>
+    </function>
+    <function name="angka" type="Integer" variable="result">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result, hasilb" type="Integer" array="False" size=""/>
+            <if expression="x==1">
+                <then>
+                    <assign variable="result" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="hasilb" expression="angka(x-1)"/>
+                    <assign variable="result" expression="x+hasilb"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
